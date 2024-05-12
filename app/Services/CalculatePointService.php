@@ -8,15 +8,15 @@ final class CalculatePointService
 {
     public static function calcPoint(int $amount): int
     {
-        if($amount < 0){
-          throw new PreconditionException('購入金額が負の数');
+        if ($amount < 0) {
+            throw new PreconditionException('購入金額が負の数');
         }
 
-        if($amount < 1000){
+        if ($amount < 1000) {
             return 0;
         }
 
-        if($amount < 10000){
+        if ($amount < 10000) {
             $basePoint = 1;
         } else {
             $basePoint = 2;
